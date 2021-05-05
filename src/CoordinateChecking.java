@@ -7,7 +7,7 @@ public class CoordinateChecking {
         Scanner scanner = new Scanner(System.in);
         int coordinate = scanner.nextInt();
         if (coordinate <0 ||coordinate> new Sea().getHeight()){
-
+            System.out.println();
         }
 
         return coordinate;
