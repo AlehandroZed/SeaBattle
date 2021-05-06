@@ -3,16 +3,17 @@ public class Game {
 
 //        Game game = new Game();
         Sea sea = new Sea();
-        sea.createEmptySea();
+        //sea.createEmptySea();
+        sea.setShips(); //УСТАНОВИТЬ КОРАБЛИ!
 
-        MarineFleet marineFleetUser1 = new MarineFleet();
-        marineFleetUser1.addShips();
+//        MarineFleet marineFleetUser1 = new MarineFleet();
+//        marineFleetUser1.addShips();
 
-        System.out.println(marineFleetUser1.getShips().size());
-
-        for (Ship s : marineFleetUser1.getShips()) {
-            sea.setShip(s);
-        }
+//        System.out.println(marineFleetUser1.getShips().size());
+//
+//        for (Ship s : marineFleetUser1.getShips()) {
+//            sea.setShip(s);
+//        }
 
 //        Ship ship1 = new Ship(3,1,1);
 //        Ship ship2 = new Ship(1,3,4);
@@ -25,7 +26,6 @@ public class Game {
 //        sea.setShip(ship4);
 
         sea.printSea();
-
 
     }
 }
