@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Ship {
     private final int deck;
 
@@ -10,13 +8,30 @@ public class Ship {
         this.ship = new int[deck][2];
         for (int i = 0; i < deck; i++) {
 
-            CoordinateChecking coordinateChecking = new CoordinateChecking();
+            //EnterCoordinate enterCoordinate = new EnterCoordinate();
 
             System.out.println("Введите координату X: ");
-            ship[i][0] = coordinateChecking.go();
+            int x = new EnterCoordinate().go();
+
 
             System.out.println("Введите координату Y: ");
-            ship[i][1] = coordinateChecking.go();
+            int y = new EnterCoordinate().go();
+
+            System.out.println(x+" - "+y);
+
+            if (i > 0) {
+                if ((ship[i - 1][0] == x) || (ship[i - 1][1] == y)) {
+                    ship[i][0] = x;
+                    ship[i][1] = y;
+                } else {
+                    System.out.println("Координаты палубы не корректны!");
+                    i--;
+                }
+            } else {
+                ship[i][0] = x;
+                ship[i][1] = y;
+            }
+
 
             System.out.println("deck № " + i + " is creating");
 
@@ -31,5 +46,9 @@ public class Ship {
 
     public int[][] getShip() {
         return ship;
+    }
+
+    public boolean coordinateChecking(int i) {
+        return true;
     }
 }
